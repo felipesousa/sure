@@ -54,10 +54,6 @@ end %>
         <%= icon("panel-left", as_button: true, data: { action: "app-layout#openMobileSidebar"}) %>
       <% end %>
 
-      <%= link_to home_path, class: "block" do %>
-        <%= image_tag "logomark-color.svg", class: "w-9 h-9 mx-auto" %>
-      <% end %>
-
       <div class="flex items-center gap-1">
         <button type="button"
                 class="inline-flex items-center justify-center w-9 h-9 pointer-coarse:w-11 pointer-coarse:h-11 rounded-lg text-secondary hover:text-primary hover:bg-container-inset-hover transition-colors focus-ring"
@@ -76,12 +72,6 @@ end %>
     <%# DESKTOP - Left navbar %>
     <div class="hidden lg:block border-r border-divider">
       <nav class="h-full flex flex-col shrink-0 w-[84px] py-4">
-        <div class="pl-2 mb-3">
-          <%= link_to home_path, class: "block" do %>
-            <%= image_tag "logomark-color.svg", class: "w-9 h-9 mx-auto" %>
-          <% end %>
-        </div>
-
         <ul class="space-y-0.5">
           <% desktop_nav_items.reject { |item| item[:mobile_only] }.each do |nav_item| %>
             <li>
